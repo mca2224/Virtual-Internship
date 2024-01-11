@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation form </title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return formValidation()">
+        <div style="text-align: center; margin-top: 200px;">
+            <label for="name">Name</label><br><br>
+            <input type="text" id="name"><br><br>
+            <label for="email">EMAIL</label><br><br>
+            <input type="email" id="email"><br><br>
+            <label for="pass">PASSWORD</label><br><br>
+            <input type="password" id="pass"><br><br>
+            <input type="submit" value="submit">
+        </div>
+    </form>
+
+    <script>
+        function formValidation() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("pass").value;
+
+            if (name.length < 2 || name.length > 20) {
+                alert("Name length should be more than 2 and less than 21");
+                return false;
+            }
+
+            if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("Please enter a valid email!");
+                return false;
+            }
+
+            if (password.length < 5 || password.length > 15) {
+                alert("Password length must be between 5-15 characters!");
+                return false;
+            }
+
+            return true; // Form will be submitted if all validations pass
+        }
+    </script>
+</body>
+</html>
