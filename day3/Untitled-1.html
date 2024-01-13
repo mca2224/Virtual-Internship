@@ -1,97 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIET Website</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #333;
-            background: #2980B9;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1px;
-            text-align: center;
-            height: 75px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: aquamarine;
-            padding: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #555;
-            color: #fff;
-        }
-
-        main {
-            padding: 1em;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            margin-top: 345px;
-        }
-
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <title>How to Create responsive Homepage</title>
+    <link rel="stylesheet" href="style.css">    
 </head>
-
 <body>
     <header>
-        <h1 style="margin-bottom: 20px;">KIET<br>
-        
-    </header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+We are <span>Creative</span></h1>
+<a href="#">Contact US</a>
+    </div>
+</header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Courses</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <main>
-        <!-- Your main content goes here -->
-        <h2 style="color: #555;">Welcome to KIET</h2>
-        <p>This is the homepage content. Explore our programs and opportunities.</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 KIET. All rights reserved.</p>
-    </footer>
 </body>
-
 </html>
