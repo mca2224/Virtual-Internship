@@ -1,51 +1,48 @@
 <!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation form </title>
-    <style>
-        body {
-            background-color: aqua;
-        }
-    </style>
-</head>
-<body>
-    <form onsubmit="return formValidation()">
-        <div style="text-align: center; margin-top: 200px;">
-            <label for="name">Name</label><br><br>
-            <input type="text" id="name"><br><br>
-            <label for="email">EMAIL</label><br><br>
-            <input type="email" id="email"><br><br>
-            <label for="pass">PASSWORD</label><br><br>
-            <input type="password" id="pass"><br><br>
-            <input type="submit" value="submit">
-        </div>
+    <title>Form Validation in HTML | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link For Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+    <form action="thank-you.html">
+      <h2>Form Validation</h2>
+      <div class="form-group fullname">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name">
+      </div>
+      <div class="form-group email">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" placeholder="Enter your email address">
+      </div>
+      <div class="form-group password">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <i id="pass-toggle-btn" class="fa-solid fa-eye"></i>
+      </div>
+      <div class="form-group date">
+        <label for="date">Birth Date</label>
+        <input type="date" id="date" placeholder="Select your date">
+      </div>
+      <div class="form-group gender">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="" selected disabled>Select your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group submit-btn">
+        <input type="submit" value="Submit">
+      </div>
     </form>
 
-    <script>
-        function formValidation() {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("pass").value;
-
-            if (name.length < 2 || name.length > 20) {
-                alert("Name length should be more than 2 and less than 21");
-                return false;
-            }
-
-            if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-                alert("Please enter a valid email!");
-                return false;
-            }
-
-            if (password.length < 5 || password.length > 15) {
-                alert("Password length must be between 5-15 characters!");
-                return false;
-            }
-
-            return true; // Form will be submitted if all validations pass
-        }
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
