@@ -1,0 +1,45 @@
+
+/* Add custom styles to your page */
+body {
+    background-color: #f5f5f5;
+    background-image: url('sky.webp'); /* Add your background image URL here */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    background-color: #007BFF;
+    color: white;
+}
+
+#current-weather {
+    background-color: #343a40;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.forecast {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Style the social icons */
+.social a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
